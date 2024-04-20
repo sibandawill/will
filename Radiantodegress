@@ -1,0 +1,32 @@
+import math
+def users(number):
+    while True:
+        user = input(number)
+        try:
+            floater = float(user)
+            return floater
+        except ValueError:
+            print("Error: Please enter a valid number.")
+print('Welcome to the radian to degrees calculator. ')
+def convert():
+
+    pi = math.pi
+    radians = users('Enter radians: ')
+    conversion = float(radians) * 180 / pi
+    if conversion <= 360:
+        print(conversion)
+    else:
+        print(conversion % 360)
+
+convert()
+def main():
+    while True:
+        cont = input('Would you like to calculate again? Yes or No ')
+        if cont == 'Yes':
+            convert()
+        elif cont == 'No':
+            break
+        else:
+            print(f'Error Try Again ')
+if __name__ == "__main__":
+    main()
